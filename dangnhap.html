@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Đăng Nhập</title>        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>          
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+   
+</head>
+<body >
+  <!-- PHẦN THANH ĐIỀU HƯỚNG -->
+  <nav class=" navbar navbar-expand-lg  bg-warning   position-fixed top-0  start-0 w-100  " >
+    <div class="container">        
+      <!-- NÚT MENU -->
+      <button class="navbar-toggler"   type="button" data-bs-toggle="collapse"  data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"> </span>
+      </button>
+
+      <!--LOGO-->
+      <a href="trangchu.html" class="navbar-brand d-lg-none "><img src="images/logo1.png" id="logo" alt=""></a>
+
+      <!-- Điều hướng -->
+      <div class=" collapse navbar-collapse  p-2 flex-column" id="navbarContent">       
+        <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
+          <!-- SEARCH -->
+          <form id="search" class="d-flex" name="frm-search"method="get" action="timkiem.html">
+            <input type="search" class="form-control me-2" placeholder="Nhập sản phẩm cần tìm" size="30" name="words" onkeypress="">
+            <button class="btn btn-outline-dark" type="submit" ><i class="fa fa-search" onclick="doSearch()" ></i></button>
+          </form>
+          <!-- LOGO-->
+          <a href="trangchu.html" class="navbar-brand d-none d-lg-block"><img src="images/logo1.png" id="logo" alt=""></a>
+
+          <ul class="navbar-nav">
+          <!-- ĐĂNG NHẬP -->
+           <li  class="nav-item d-flex align-items-center">
+              <a href="dangnhap.html" class="nav-link mx-2"><i class="fas fa-user"></i>Đăng Nhập</a>
+           </li>
+           <!-- GIỎ HÀNG -->
+           <li  class="nav-item d-flex align-items-center">
+            <a href="giohang.html" class="nav-link mx-2"><i class="fas fa-shopping-cart"></i>Giỏ Hàng</a>
+            <!-- SỐ LƯỢNG TRONG GIỎ -->
+            <span class="badge rounded-pill bg-secondary">0</span>
+          </li>
+          </ul>
+        </div>
+
+        
+        <div class="d-block w-100">
+          <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
+            <li class="nav-item mx-2">
+              <a href="trangchu.html" class="nav-link">Trang Chủ</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="sanpham.html" class="nav-link">Sản Phẩm</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="gioithieu.html" class="nav-link">Giới Thiệu</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="tintuc.html" class="nav-link">Tin tức</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="lienhe.html" class="nav-link">Liên Hệ</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="dangky.html" class="nav-link">Đăng Ký</a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+</nav>
+
+
+    <main>
+      <div class="wapper">
+        <div class="wapper-heading">
+          <h1>Đăng Nhập</h1>
+        </div>
+        <form>
+          <div class="input__field">
+            <input id="username" type="text" placeholder="User Name" />
+          </div>
+  
+          <div class="input__field">
+            <input id="email" type="text" placeholder="Email" />
+          </div>
+          <div class="input__field">
+            <input id="password" type="password" placeholder="Password" />
+            
+          </div>
+          <a href="dangky.html" class="signup-link">Bạn chưa có tài khoản</a>
+          <button class="btn btn-login">Đăng Nhập</button>
+        </form>
+      </div>
+      <script src="js/login.js"></script>
+
+    </main>
+
+
+
+     <!-- FOOTER -->
+     <footer class="d-flex justify-content-between my-5 text-start flex-wrap justify-content-lg-center">  
+
+      <ul class="nav flex-column ">
+        <li class="fw-bold nav-item ">
+          <a href="#" class="nav-link text-dark">Trung tâm trợ giúp</a>
+        </li>
+        <li class="nav-item"><a href="" class="nav-link text-muted">Hướng dẫn mua hàng</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-muted">Hướng dẫn thanh toán</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-muted">Tư vấn vận chuyển</a></li>
+      </ul>
+
+      <ul class="nav flex-column">
+        <li class="fw-bold nav-item ">
+          <a href="#" class="nav-link text-dark">Phản hồi</a>
+        </li>
+        <li class="nav-item"><a href="" class="nav-link text-muted text-center"><i class="fa fa-facebook"></i></a></li>
+        <li class="nav-item"><a href="" class="nav-link text-muted text-center"><i class="fa fa-instagram"></i></a></li>
+        <li class="nav-item"><a href="" class="nav-link text-muted text-center"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+
+    </footer>
+  </div>
+  
+</body>
+</html>

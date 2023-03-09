@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Liên Hệ</title>        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>          
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>   
+
+   
+</head>
+<body >
+  <!-- PHẦN THANH ĐIỀU HƯỚNG -->
+  <nav class=" navbar navbar-expand-lg  bg-warning   position-fixed top-0  start-0 w-100  " >
+    <div class="container">        
+      <!-- NÚT MENU -->
+      <button class="navbar-toggler"   type="button" data-bs-toggle="collapse"  data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"> </span>
+      </button>
+
+      <!--LOGO-->
+      <a href="trangchu.html" class="navbar-brand d-lg-none "><img src="images/logo1.png" id="logo" alt=""></a>
+
+      <!-- Điều hướng -->
+      <div class=" collapse navbar-collapse  p-2 flex-column" id="navbarContent">       
+        <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
+          <!-- SEARCH -->
+          <form id="search" class="d-flex" name="frm-search"method="get" action="timkiem.html">
+            <input type="search" class="form-control me-2" placeholder="Nhập sản phẩm cần tìm" size="30" name="words" onkeypress="">
+            <button class="btn btn-outline-dark" type="submit" ><i class="fa fa-search" onclick="doSearch()" ></i></button>
+          </form>
+          <!-- LOGO-->
+          <a href="trangchu.html" class="navbar-brand d-none d-lg-block"><img src="images/logo1.png" id="logo" alt=""></a>
+
+          <ul class="navbar-nav">
+          <!-- ĐĂNG NHẬP -->
+           <li  class="nav-item d-flex align-items-center">
+              <a href="dangnhap.html" class="nav-link mx-2"><i class="fas fa-user"></i>Đăng Nhập</a>
+           </li>
+           <!-- GIỎ HÀNG -->
+           <li  class="nav-item d-flex align-items-center">
+            <a href="giohang.html" class="nav-link mx-2"><i class="fas fa-shopping-cart"></i>Giỏ Hàng</a>
+            <!-- SỐ LƯỢNG TRONG GIỎ -->
+            <span class="badge rounded-pill bg-secondary">0</span>
+          </li>
+          </ul>
+        </div>
+
+        
+        <div class="d-block w-100">
+          <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
+            <li class="nav-item mx-2">
+              <a href="trangchu.html" class="nav-link">Trang Chủ</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="sanpham.html" class="nav-link">Sản Phẩm</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="gioithieu.html" class="nav-link">Giới Thiệu</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="tintuc.html" class="nav-link">Tin tức</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="lienhe.html" class="nav-link">Liên Hệ</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="dangky.html" class="nav-link">Đăng Ký</a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+</nav>
+   
+<div class="container position-relative text-center">
+  <!-- HEADER -->
+  <header class="position-relative text-center text-white mb-5">
+    <img class="w-100" height="500" src="images/lienhe.png" alt="">
+  </header>
+
+  <form onsubmit="return contactValidate(this);" action="#">
+    <section class="vh-100" style="background-color: #2779e2;">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-9">
+    
+            <h1 class="text-white mb-4">Nhập Thông Tin Liên Hệ</h1>
+    
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body">
+    
+                <div class="row align-items-center pt-4 pb-3">
+                  <div class="col-md-3 ps-5">
+    
+                    <h6 class="mb-0">Full name</h6>
+    
+                  </div>
+                  <div class="col-md-9 pe-5">
+    
+                    <input type="text" 
+                    class="form-control form-control-lg" 
+                    id="fname"  maxlength="50" 
+                    placeholder="Vui lòng nhập Họ Tên của bạn" size="50" name="name" />
+    
+                  </div>
+                </div>
+    
+                <hr class="mx-n3">
+    
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+    
+                    <h6 class="mb-0">Email address</h6>
+    
+                  </div>
+                  <div class="col-md-9 pe-5">
+    
+                    <input type="email" 
+                    class="form-control form-control-lg" 
+                    placeholder="example@gmail.com" maxlength="50" 
+                    placeholder="Vui lòng nhập địa chỉ Email" size="50" 
+                    name="email"/>
+    
+                  </div>
+                </div>
+    
+                <hr class="mx-n3">
+
+
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+    
+                    <h6 class="mb-0">Loại Sản Phẩm Bạn Muốn Bán</h6>
+    
+                  </div>
+                  <div class="col-md-9 pe-5">                      
+
+                 <select  class="form-control form-control-lg form-select"  name="" id="">
+                    <option value="" selected >--Loại Sản Phẩm--</option>
+                    <option value="1" >Đồ Dùng Học Tập</option>
+                    <option value="2">Đồ Gia Dụng</option>
+                    <option value="3">Đồ Công Nghệ</option>
+                    <option value="4">Phương Tiện Di Chuyển</option>
+                    <option value="5">Giải Trí</option>
+                </select>
+                  </div>
+                </div>
+    
+                <hr class="mx-n3">
+    
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+    
+                    <h6 class="mb-0">Mô Tả Sản Phẩm</h6>
+    
+                  </div>
+                  <div class="col-md-9 pe-5">
+    
+                    <textarea class="form-control" 
+                    rows="3" placeholder="Nhập thông tin mô tả sản phẩm"
+                    id="w3review" rows="7" cols="50" 
+                placeholder="Nhập mô tả sản phẩm" name="message"></textarea>
+    
+                  </div>
+                </div>
+    
+                <hr class="mx-n3">
+    
+                <div class="row align-items-center py-3">
+                  <div class="col-md-3 ps-5">
+    
+                    <h6 class="mb-0">Ảnh sản phẩm</h6>
+    
+                  </div>
+                  <div class="col-md-9 pe-5">
+    
+                    <input class="form-control form-control-lg" 
+                    id="formFileLg" type="file"   />
+                    <div class="small text-muted mt-2">Upload file nén file.zip/file.rar. Kích thước file tối đa 5MB</div>
+    
+                  </div>
+                </div>
+    
+                <hr class="mx-n3">
+    
+                <div class="px-5 py-4">
+                  <button type="submit" class="btn btn-primary btn-lg">Gửi</button>
+                </div>
+    
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+  
+  <script src="js/js.js"></script>  
+    
+   <!-- FOOTER -->
+   <footer class="d-flex justify-content-between my-5 text-start flex-wrap justify-content-lg-center">  
+
+    <ul class="nav flex-column ">
+      <li class="fw-bold nav-item ">
+        <a href="#" class="nav-link text-dark">Trung tâm trợ giúp</a>
+      </li>
+      <li class="nav-item"><a href="" class="nav-link text-muted">Hướng dẫn mua hàng</a></li>
+      <li class="nav-item"><a href="" class="nav-link text-muted">Hướng dẫn thanh toán</a></li>
+      <li class="nav-item"><a href="" class="nav-link text-muted">Tư vấn vận chuyển</a></li>
+    </ul>
+
+    <ul class="nav flex-column">
+      <li class="fw-bold nav-item ">
+        <a href="#" class="nav-link text-dark">Phản hồi</a>
+      </li>
+      <li class="nav-item"><a href="" class="nav-link text-muted text-center"><i class="fa fa-facebook"></i></a></li>
+      <li class="nav-item"><a href="" class="nav-link text-muted text-center"><i class="fa fa-instagram"></i></a></li>
+      <li class="nav-item"><a href="" class="nav-link text-muted text-center"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+
+  </footer>
+</div>
+
+</body>
+</html>
